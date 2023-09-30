@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/s29_web/static/css/main.ff97eccc.css",
+    "main.js": "/s29_web/static/js/main.b72c920e.js",
+    "index.html": "/s29_web/index.html",
+    "main.ff97eccc.css.map": "/s29_web/static/css/main.ff97eccc.css.map",
+    "main.b72c920e.js.map": "/s29_web/static/js/main.b72c920e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff97eccc.css",
+    "static/js/main.b72c920e.js"
+  ]
+}
