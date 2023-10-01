@@ -1,6 +1,6 @@
 const Work = ({ props }) => {
   return (
-    <div className="work">
+    <section className="work">
       <div className="work-head">
         <p>TYPE:{props.type}</p>
         <p>CLIENT:{props.client}</p>
@@ -11,7 +11,7 @@ const Work = ({ props }) => {
         <p>{props.title}</p>
         <p>{props.desc}</p>
       </div>
-    </div>
+    </section>
   );
 };
 

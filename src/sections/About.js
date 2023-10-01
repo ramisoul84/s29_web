@@ -1,20 +1,10 @@
-const Home = () => {
+import "./about.css";
+const About = () => {
   return (
-    <section id="home">
-      <div className="hello-msg">
-        <div className="hello-sq"> </div>
-        <p>
-          hello!
-          <br />
-          We are a multidiciblinary
-          <br />
-          designe team, ready to realize
-          <br /> your ambition visions!
-        </p>
-      </div>
-      <div className="services-msg">
-        <h5 className="services-title">SERVICES</h5>
-        <p className="services-text">
+    <section id="about">
+      <div className="about-msg">
+        <h5 className="about-title">ABOUT</h5>
+        <p className="about-text">
           S29.designis here to cover all your creative needs.We offer a wide
           range of services,including <span className=""></span>
           <span className="pixel-font">
@@ -32,4 +22,4 @@ const Home = () => {
     </section>
   );
 };
-export default Home;
+export default About;

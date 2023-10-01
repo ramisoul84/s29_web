@@ -1,0 +1,28 @@
+aside {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 2px;
+}
+.side-nav {
+  width: max-content;
+  height: max-content;
+  color: black;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+aside .color1 {
+  background: #7ec670;
+}
+aside .color2 {
+  background: #4b7351;
+}
+aside .color3 {
+  background: #715d66;
+  margin-top: -17px;
+}
+aside .color4 {
+  background: #a68183;
+}

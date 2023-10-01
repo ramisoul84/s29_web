@@ -1,6 +1,9 @@
+import Header from "../components/Header";
+import "./home.css";
 const Home = () => {
   return (
     <section id="home">
+      <Header />
       <div className="hello-msg">
         <div className="hello-sq"> </div>
         <p>

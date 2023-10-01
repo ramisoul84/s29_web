@@ -1,0 +1,50 @@
+.gradient {
+  height: 20px;
+}
+.gradient-1 {
+  background: linear-gradient(90deg, #7ec670 0%, #cb9b97 100%);
+}
+.gradient-2 {
+  background: linear-gradient(90deg, #83cf74 10%, #d59f9f 90%);
+}
+.gradient-3 {
+  background: linear-gradient(90deg, #68a464 25%, #a68183 100%);
+}
+.gradient-4 {
+  background: linear-gradient(90deg, #4b7351 5%, #715d66 100%);
+}
+.gradient-5 {
+  background: linear-gradient(90deg, #334d44 5%, #45424d 100%);
+}
+.gradient-6 {
+  background: linear-gradient(90deg, #243339 5%, #292f3b 100%);
+}
+.navigator {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  font-family: "lcd_solidregular";
+  color: black;
+  align-items: center;
+}
+.header-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: 50px;
+}
+.header-nav a:visited {
+  color: black;
+}
+.header-nav a:active {
+  color: yellow;
+}
+.header-nav a:hover {
+  color: green;
+}
+.header-logo {
+  padding-left: 100px;
+}
+.navigator p {
+  display: flex;
+  height: 20px;
+  align-items: center;
+}

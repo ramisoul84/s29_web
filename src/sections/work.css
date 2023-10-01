@@ -1,0 +1,17 @@
+#work nav {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  font-family: "lcd_solidregular";
+  color: wheat;
+  margin-left: 150px;
+  padding-top: 50px;
+}
+
+.spectrum {
+  font-family: "lcd_solidregular";
+  color: wheat;
+  margin-left: 150px;
+  margin-top: 50px;
+}
