@@ -8,9 +8,7 @@ const Header = () => {
           <p>s29.design</p>
         </div>
         <nav className="header-nav">
-          <a href="#work" className="active">
-            work
-          </a>
+          <a href="#work">work</a>
           <a href="#about">about</a>
           <a href="#contact">contact</a>
         </nav>

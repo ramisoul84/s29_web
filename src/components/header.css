@@ -34,6 +34,9 @@
 .header-nav a:visited {
   color: black;
 }
+.header-nav a:link {
+  color: black;
+}
 .header-nav a:active {
   color: yellow;
 }

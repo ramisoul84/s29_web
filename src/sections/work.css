@@ -15,3 +15,10 @@
   margin-left: 150px;
   margin-top: 50px;
 }
+
+.projects {
+  display: flex;
+  flex-direction: column;
+
+  color: wheat;
+}

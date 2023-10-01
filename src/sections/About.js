@@ -19,6 +19,7 @@ const About = () => {
           branding, or architecture, we've got you covered :
         </p>
       </div>
+      <div className="team"></div>
     </section>
   );
 };

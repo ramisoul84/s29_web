@@ -1,0 +1,41 @@
+.project {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 25px;
+  margin: 25px auto;
+  width: 80%;
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-family: "lcd_solidregular";
+  line-height: 20px;
+  background: #68a464;
+  padding: 15px;
+  height: max-content;
+}
+.project-desc {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 15px;
+  gap: 10px;
+  border: 1px solid wheat;
+}
+
+.project-title {
+  font-family: "lcd_solidregular";
+  margin-bottom: 15px;
+  font-weight: 200;
+}
+
+.project-img {
+  width: 100%;
+}
+
+.project-text {
+  font-family: "Montserrat", sans-serif;
+}
+li {
+  list-style-type: none;
+}
