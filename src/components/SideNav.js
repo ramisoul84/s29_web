@@ -7,7 +7,9 @@ const SideNav = () => {
       <a className="side-nav" href="#works">
         Works
       </a>
-      <a className="side-nav">Contact</a>
+      <a className="side-nav" href="#contact">
+        Contact
+      </a>
     </aside>
   );
 };
