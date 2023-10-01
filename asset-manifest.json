@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/s29_web/static/css/main.e7d2e5b4.css",
-    "main.js": "/s29_web/static/js/main.d400f43b.js",
+    "main.css": "/s29_web/static/css/main.87497ead.css",
+    "main.js": "/s29_web/static/js/main.fea70027.js",
+    "static/media/crypto.jpg": "/s29_web/static/media/crypto.b16ea93cc08fa4b9543d.jpg",
     "static/media/lcdsolid-vpzb-webfont.woff": "/s29_web/static/media/lcdsolid-vpzb-webfont.0dcf3e65e4028043a92d.woff",
     "static/media/lcdsolid-vpzb-webfont.woff2": "/s29_web/static/media/lcdsolid-vpzb-webfont.b9df3b6d35774784db2a.woff2",
     "index.html": "/s29_web/index.html",
-    "main.e7d2e5b4.css.map": "/s29_web/static/css/main.e7d2e5b4.css.map",
-    "main.d400f43b.js.map": "/s29_web/static/js/main.d400f43b.js.map"
+    "main.87497ead.css.map": "/s29_web/static/css/main.87497ead.css.map",
+    "main.fea70027.js.map": "/s29_web/static/js/main.fea70027.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7d2e5b4.css",
-    "static/js/main.d400f43b.js"
+    "static/css/main.87497ead.css",
+    "static/js/main.fea70027.js"
   ]
 }
