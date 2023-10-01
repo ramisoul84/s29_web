@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/s29_web/static/css/main.f41152f1.css",
-    "main.js": "/s29_web/static/js/main.3931c1bb.js",
+    "main.css": "/s29_web/static/css/main.f2d00629.css",
+    "main.js": "/s29_web/static/js/main.b4a65a49.js",
+    "static/media/lcdsolid-vpzb-webfont.woff": "/s29_web/static/media/lcdsolid-vpzb-webfont.0dcf3e65e4028043a92d.woff",
+    "static/media/lcdsolid-vpzb-webfont.woff2": "/s29_web/static/media/lcdsolid-vpzb-webfont.b9df3b6d35774784db2a.woff2",
     "index.html": "/s29_web/index.html",
-    "main.f41152f1.css.map": "/s29_web/static/css/main.f41152f1.css.map",
-    "main.3931c1bb.js.map": "/s29_web/static/js/main.3931c1bb.js.map"
+    "main.f2d00629.css.map": "/s29_web/static/css/main.f2d00629.css.map",
+    "main.b4a65a49.js.map": "/s29_web/static/js/main.b4a65a49.js.map"
   },
   "entrypoints": [
-    "static/css/main.f41152f1.css",
-    "static/js/main.3931c1bb.js"
+    "static/css/main.f2d00629.css",
+    "static/js/main.b4a65a49.js"
   ]
 }
