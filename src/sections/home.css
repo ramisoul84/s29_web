@@ -1,55 +1,60 @@
-.hello-msg {
-  font-family: "lcd_solidregular";
-  color: wheat;
-  width: max-content;
-  margin: 100px auto 0 auto;
-  line-height: 30px;
-  font-size: 20px;
+#home {
+  display: flex;
+  flex-direction: column;
+  -webkit-animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) 2.5s both;
+  animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) 2.5s both;
 }
+
+.home-hello {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-family: var(--text-lcd);
+  margin: 12rem auto 5rem;
+}
+
 .hello-sq {
-  margin-left: -12px;
+  margin-left: -1rem;
   background: linear-gradient(45deg, #cb9b97, #7ec670);
-  width: 12px;
-  height: 12px;
+  width: 0.8rem;
+  height: 0.8rem;
   -webkit-animation: heartbeat 1500ms ease-in-out infinite both;
   animation: heartbeat 1500ms ease-in-out infinite both;
 }
-.services-msg {
+
+.home-services {
+  font-family: var(--text-mon);
+  padding: 1rem;
+  margin-top: 4rem;
   border-width: 4px;
   border-style: solid;
   border-image: linear-gradient(to right, #cb9b97, #7ec670) 1;
-  width: max-content;
-  padding: 10px;
-  width: 75%;
-  margin: 75px auto;
-}
-.services-title {
-  font-family: "lcd_solidregular";
-  color: wheat;
-  font-size: 30px;
-  font-weight: 200;
-  padding: 10px;
-  position: relative;
-  z-index: 1;
-  &:before {
-    border-top: 10px solid black;
-    content: "";
-    margin: 0 auto; /* this centers the line to the full width specified */
-    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-    top: 40%;
-    left: -5px;
-    width: 180px;
-    z-index: -1;
-  }
+  line-height: 1.8rem;
 }
 
-.services-text {
-  font-family: "Montserrat", sans-serif;
-  color: wheat;
-  padding: 10px;
+.home-services h5 {
+  font-family: var(--text-lcd);
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 0 1rem 1rem 1rem;
+  position: relative;
+  width: max-content;
 }
-.pixel-font {
-  font-family: "lcd_solidregular";
+
+.home-services h5::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  background-color: black;
+  height: 0.5rem;
+  width: 100%;
+  top: 25%;
+  margin-left: -01rem;
+  text-align: center;
+  z-index: -1;
+}
+
+.lcd {
+  font-family: var(--text-lcd);
 }
 .color1 {
   color: #7ec670;
@@ -66,6 +71,12 @@
 .color5 {
   color: #cb9b97;
 }
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
 
 @-webkit-keyframes heartbeat {
   from {
@@ -133,5 +144,27 @@
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

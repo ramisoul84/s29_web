@@ -7,60 +7,35 @@
   font-style: normal;
 }
 
+:root {
+  --color-bg: #1f2935;
+  --color-txt: #fff;
+  --text-lcd: "lcd_solidregular";
+  --text-mon: "Montserrat";
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a {
-  width: max-content;
-}
-a:link,
-a:visited {
-  color: unset;
-  text-decoration: none;
+body {
+  background-color: var(--color-bg);
+  color: var(--color-txt);
 }
 
-a:link:active,
-a:visited:active {
-  color: unset;
-}
 section {
-  min-height: 100vh;
-}
-
-/* HOME */
-
-/* SIDE NAV*/
-aside {
-  font-family: "lcd_solidregular";
-  position: fixed;
-  right: 5px;
-  bottom: 5px;
   display: flex;
-  flex-direction: column;
-  color: wheat;
-  gap: 25px;
-}
-.side-nav {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+  align-items: center;
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 10%;
 }
 
-/**
- * ----------------------------------------
- * animation heartbeat
- * ----------------------------------------
- */
-
-@keyframes typing {
-  to {
-    width: 0;
-  }
-}
-@keyframes caret {
-  50% {
-    color: transparent;
-  }
+a:visited,
+a:link,
+a:hover {
+  color: black;
+  text-decoration: none;
 }

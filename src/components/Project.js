@@ -1,25 +1,28 @@
 import "./project.css";
-import img from "../assets/images/crypto.jpg";
-const Project = ({ props }) => {
+const Project = ({ project }) => {
   return (
     <div className="project">
       <div className="project-info">
         <p>TYPE:</p>
         <p>
-          {props.type.map((e) => {
+          {project.type.map((e) => {
             return <li>{e}</li>;
           })}
         </p>
         <p>CLIENT:</p>
-        <p>{props.client}</p>
+        <p>{project.client}</p>
         <p>YEAR:</p>
-        <p>{props.year}</p>
+        <p>{project.year}</p>
       </div>
       <div className="project-desc">
-        <img src={img} className="project-img" />
+        <img
+          src={require("../assets/img/" + project.img + ".jpg")}
+          alt="project.img"
+          className="project-img"
+        />
         <div>
-          <h3 className="project-title">{props.title}</h3>
-          <p className="project-text">{props.desc}</p>
+          <h3 className="project-title">{project.title}</h3>
+          <p className="project-text">{project.desc}</p>
         </div>
       </div>
     </div>

@@ -1,24 +1,89 @@
-#work nav {
-  width: max-content;
+#work {
+  display: flex;
+  flex-direction: column;
+}
+.work-head {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 25px;
-  font-family: "lcd_solidregular";
-  color: wheat;
-  margin-left: 150px;
-  padding-top: 50px;
+  gap: 1rem;
+  font-family: var(--text-lcd);
+  position: relative;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  line-height: 1.5rem;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  align-self: self-start;
+}
+.work-head p {
+  width: max-content;
+  text-align: center;
+}
+.work-head p:first-of-type {
+  font-size: 1.5rem;
 }
 
+.work-head ::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  background-color: black;
+  height: 0.4rem;
+  width: 40%;
+  top: 0.6rem;
+  margin-left: -1rem;
+  z-index: -1;
+}
+.btn-filt {
+  color: gray;
+  cursor: pointer;
+}
+.btn-spect:hover {
+  cursor: pointer;
+}
 .spectrum {
-  font-family: "lcd_solidregular";
-  color: wheat;
-  margin-left: 150px;
-  margin-top: 50px;
+  font-family: var(--text-lcd);
+  font-weight: 200;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+  width: 100%;
 }
+.spect-box {
+  width: 100%;
+  height: 1rem;
+  background: linear-gradient(90deg, #83cf74 0%, #d59f9f 100%);
+}
+.spect-btns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+}
+.filter-box {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 1rem;
 
+  align-self: flex-start;
+}
+.filter-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
 .projects {
   display: flex;
   flex-direction: column;
-
-  color: wheat;
+  gap: 1rem;
+  width: 100%;
 }

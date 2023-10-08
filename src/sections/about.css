@@ -1,38 +1,74 @@
-.about-msg {
-  border-width: 4px;
-  border-style: solid;
-  border-image: linear-gradient(to right, #cb9b97, #7ec670) 1;
-  width: max-content;
-  padding: 10px;
-  width: 75%;
-  margin: 75px auto;
-}
-
-.about-title {
-  font-family: "lcd_solidregular";
-  color: wheat;
-  font-size: 30px;
-  font-weight: 200;
-  padding: 10px;
-  position: relative;
-  z-index: 1;
-  &:before {
-    border-top: 10px solid black;
-    content: "";
-    margin: 0 auto; /* this centers the line to the full width specified */
-    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-    top: 40%;
-    left: -5px;
-    width: 120px;
-    z-index: -1;
-  }
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
 }
 
 .about-text {
-  font-family: "Montserrat", sans-serif;
-  color: wheat;
-  padding: 10px;
+  font-family: var(--text-mon);
+  padding: 1rem;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #d59f9f, #7ec670) 1;
+  line-height: 1.8rem;
+  margin: 1rem 0 2rem 0;
 }
-.pixel-font {
-  font-family: "lcd_solidregular";
+
+.about-text h5 {
+  font-family: var(--text-lcd);
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 0 1rem 1rem 1rem;
+  position: relative;
+  width: max-content;
+}
+
+.about-text h5::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  background-color: black;
+  height: 0.5rem;
+  width: 100%;
+  top: 25%;
+  margin-left: -01rem;
+  justify-content: center;
+  z-index: -1;
+}
+
+.team {
+  width: 90%;
+}
+
+.team h5 {
+  font-family: var(--text-lcd);
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 0 1rem 1rem 1rem;
+  position: relative;
+  width: max-content;
+}
+.team h5::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  background-color: black;
+  height: 0.5rem;
+  width: 100%;
+  top: 25%;
+  margin-left: -01rem;
+  justify-content: center;
+  z-index: -1;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.team-pic {
+  width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }

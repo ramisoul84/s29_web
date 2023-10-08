@@ -1,38 +1,69 @@
+import { useState } from "react";
 import "./work.css";
 import Project from "../components/Project";
-const projects = [
-  {
-    type: ["WEB DESIGNE"],
-    client: "RESVR",
-    year: 2023,
-    title: "Project 1",
-    desc: "S29.designis here to cover all your creative needs.We offer a wide range of services,including game designe, web designe,brand designe,arch-viz and architecture. With our divers skill set,we're well-equipped to handle projectsthat cut across various industries.So whether you are in gameing, web development, branding, or architecture, we've got you covered :",
-    img: "../assets/crypto.jpg",
-  },
-  {
-    type: ["WEB DESIGNE", "Branding"],
-    client: "RESVR",
-    year: 2023,
-    title: "Project 2",
-    desc: "S29.designis here to cover all your creative needs.We offer a wide range of services,including game designe, web designe,brand designe,arch-viz and architecture. With our divers skill set,we're well-equipped to handle projectsthat cut across various industries.So whether you are in gameing, web development, branding, or architecture, we've got you covered :",
-    img: "../assets/crypto.jpg",
-  },
-];
-
+import projects from "../assets/data/projects.json";
 const Work = () => {
+  const [show, setShow] = useState("spect");
   return (
     <section id="work">
-      <nav>
+      <div className="work-head">
         <p>WORK</p>
-        <p>SPECTRUM</p>
-        <p>FILTERS</p>
-      </nav>
-      <div className="spectrum">
-        <p>OUR EXPERIENCE SPECTRUM</p>
+        <p
+          className="btn-spect"
+          onClick={() => setShow("spect")}
+          style={{ color: show === "spect" ? "white" : "gray" }}
+        >
+          SPECTRUM
+        </p>
+        <p
+          className="btn-filt"
+          onClick={() => setShow("filt")}
+          style={{ color: show === "filt" ? "white" : "gray" }}
+        >
+          FILTERS
+        </p>
       </div>
+      {show === "filt" ? (
+        <form className="filter-box">
+          <div className="filter-row">
+            <lable>game design</lable>
+            <input type="checkbox" />
+          </div>
+          <div className="filter-row">
+            <lable>web design</lable>
+            <input type="checkbox" />
+          </div>
+          <div className="filter-row">
+            <lable>brand design</lable>
+            <input type="checkbox" />
+          </div>
+          <div className="filter-row">
+            <lable>arch-viz</lable>
+            <input type="checkbox" />
+          </div>
+          <div className="filter-row">
+            <lable>architecture</lable>
+            <input type="checkbox" />
+          </div>
+        </form>
+      ) : (
+        <div className="spectrum">
+          <p>OUR EXPERIENCE SPECTRUM</p>
+          <div>
+            <div className="spect-btns">
+              <p>game design</p>
+              <p>game design</p>
+              <p>game design</p>
+              <p>game design</p>
+              <p>game design</p>
+            </div>
+            <div className="spect-box"></div>
+          </div>
+        </div>
+      )}
       <div className="projects">
-        {projects.map((e) => {
-          return <Project props={e} />;
+        {projects.map((e, i) => {
+          return <Project project={e} />;
         })}
       </div>
     </section>

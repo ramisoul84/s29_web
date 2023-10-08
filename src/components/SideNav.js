@@ -1,7 +1,7 @@
 import "./sidenav.css";
 const SideNav = () => {
   return (
-    <aside>
+    <aside id="side-nav">
       <a className="side-nav color1" href="#home">
         HOME
       </a>

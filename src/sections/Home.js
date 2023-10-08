@@ -1,10 +1,8 @@
-import Header from "../components/Header";
 import "./home.css";
 const Home = () => {
   return (
     <section id="home">
-      <Header />
-      <div className="hello-msg">
+      <div className="home-hello">
         <div className="hello-sq"> </div>
         <p>
           hello!
@@ -15,21 +13,21 @@ const Home = () => {
           <br /> your ambition visions!
         </p>
       </div>
-      <div className="services-msg">
-        <h5 className="services-title">SERVICES</h5>
-        <p className="services-text">
-          S29.designis here to cover all your creative needs.We offer a wide
-          range of services,including <span className=""></span>
-          <span className="pixel-font">
-            <span className="color1">game designe, </span>
-            <span className="color2">web designe, </span>
-            <span className="color3">brand designe, </span>
+      <div className="home-services">
+        <h5>SERVICES</h5>
+        <p>
+          S29.designis here to cover all your creative needs. We offer a wide
+          range of services, including <span className=""></span>
+          <span className="lcd">
+            <span className="color1">game design, </span>
+            <span className="color2">web design, </span>
+            <span className="color3">brand design, </span>
             <span className="color4">arch-viz, </span>
           </span>{" "}
-          and <span className="pixel-font color5">architecture</span>. With our
-          divers skill set,we're well-equipped to handle projectsthat cut across
-          various industries.So whether you are in gameing, web development,
-          branding, or architecture, we've got you covered :
+          and <span className="lcd color5">architecture</span>. With our diverse
+          skill set, we're well-equipped to handle projects that cut across
+          various industries. So whether you are in gameing, web development,
+          branding, or architecture, we've got you covered.
         </p>
       </div>
     </section>

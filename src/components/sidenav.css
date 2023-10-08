@@ -4,6 +4,11 @@ aside {
   bottom: 10px;
   display: flex;
   gap: 2px;
+  font-family: "lcd_solidregular";
+}
+#side-nav {
+  visibility: hidden;
+  transition: ease-in-out 0.3s;
 }
 .side-nav {
   width: max-content;
@@ -12,16 +17,21 @@ aside {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+.side-nav:hover {
+  background: transparent;
+}
 
 aside .color1 {
   background: #7ec670;
+  margin-top: 30px;
 }
 aside .color2 {
   background: #4b7351;
+  margin-top: 20px;
 }
 aside .color3 {
   background: #715d66;
-  margin-top: -17px;
+  margin-top: -10px;
 }
 aside .color4 {
   background: #a68183;
