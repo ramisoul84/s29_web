@@ -1,23 +1,58 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./work.css";
 import Project from "../components/Project";
 import projects from "../assets/data/projects.json";
 const Work = () => {
   const [show, setShow] = useState("spect");
+  const [types, setTypes] = useState([]);
+  const [filterdProjects, setFilterdProjects] = useState([]);
+  const changeHandle = (e) => {
+    const { checked, name } = e.target;
+    let arr = [...types];
+    if (checked) {
+      arr.push(name);
+    } else {
+      arr = arr.filter((item) => {
+        return item !== name;
+      });
+    }
+    setTypes(arr);
+  };
+  const filterProjects = (projects, types) => {
+    const res = [];
+    let arr = [];
+    types.forEach((element, i) => {
+      arr = projects.filter((e) => e.type.includes(element));
+      for (i in arr) {
+        res.push(arr[i]);
+      }
+    });
+    // Here we should delete duplicates ....
+    return res;
+  };
+  useEffect(() => setFilterdProjects(filterProjects(projects, types)), [types]);
   return (
     <section id="work">
       <div className="work-head">
         <p>WORK</p>
         <p
           className="btn-spect"
-          onClick={() => setShow("spect")}
+          onClick={() => {
+            setShow("spect");
+            setTypes([]);
+            setFilterdProjects([]);
+          }}
           style={{ color: show === "spect" ? "white" : "gray" }}
         >
           SPECTRUM
         </p>
         <p
           className="btn-filt"
-          onClick={() => setShow("filt")}
+          onClick={() => {
+            setShow("filt");
+            setTypes([]);
+            setFilterdProjects([]);
+          }}
           style={{ color: show === "filt" ? "white" : "gray" }}
         >
           FILTERS
@@ -26,24 +61,32 @@ const Work = () => {
       {show === "filt" ? (
         <form className="filter-box">
           <div className="filter-row">
+            <input type="checkbox" name="GAME DESIGN" onChange={changeHandle} />
             <lable>game design</lable>
-            <input type="checkbox" />
           </div>
           <div className="filter-row">
+            <input type="checkbox" name="WEB DESIGN" onChange={changeHandle} />
             <lable>web design</lable>
-            <input type="checkbox" />
           </div>
           <div className="filter-row">
+            <input
+              type="checkbox"
+              name="BRAND DESIGN"
+              onChange={changeHandle}
+            />
             <lable>brand design</lable>
-            <input type="checkbox" />
           </div>
           <div className="filter-row">
+            <input type="checkbox" name="ARCH-VIZ" onChange={changeHandle} />
             <lable>arch-viz</lable>
-            <input type="checkbox" />
           </div>
           <div className="filter-row">
+            <input
+              type="checkbox"
+              name="ARCHITECTURE"
+              onChange={changeHandle}
+            />
             <lable>architecture</lable>
-            <input type="checkbox" />
           </div>
         </form>
       ) : (
@@ -51,18 +94,26 @@ const Work = () => {
           <p>OUR EXPERIENCE SPECTRUM</p>
           <div>
             <div className="spect-btns">
+              <p>all</p>
               <p>game design</p>
-              <p>game design</p>
-              <p>game design</p>
-              <p>game design</p>
-              <p>game design</p>
+              <p>web design</p>
+              <p>brand design</p>
+              <p>arch-viz</p>
+              <p>architecture</p>
             </div>
             <div className="spect-box"></div>
           </div>
         </div>
       )}
+      <div className="search-res">
+        {types.length ? (
+          <p>{filterdProjects.length} projects are founded</p>
+        ) : (
+          <p>Choose types you want to see</p>
+        )}
+      </div>
       <div className="projects">
-        {projects.map((e, i) => {
+        {filterdProjects.map((e, i) => {
           return <Project project={e} />;
         })}
       </div>

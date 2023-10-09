@@ -58,24 +58,22 @@
 }
 .spect-btns {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   width: 100%;
 }
 .filter-box {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
   padding: 1rem;
-
-  align-self: flex-start;
+  margin-top: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(90deg, #75b56a, #de6e6e) 1;
 }
 .filter-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  gap: 0.5rem;
 }
 input[type="checkbox"] {
   width: 1rem;
@@ -86,4 +84,10 @@ input[type="checkbox"] {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+}
+
+.search-res {
+  font-family: var(--text-lcd);
+  margin-top: 1rem;
+  width: 60%;
 }

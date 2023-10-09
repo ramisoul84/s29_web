@@ -1,6 +1,7 @@
 [
   {
-    "type": ["WEB DESIGN"],
+    "id": 1,
+    "type": ["GAME DESIGN"],
     "client": "RESVR",
     "year": 2023,
     "title": "Project 1",
@@ -8,10 +9,47 @@
     "img": "crypto"
   },
   {
-    "type": ["WEB DESIGNE", "Branding"],
+    "id": 2,
+    "type": ["WEB DESIGN", "GAME DESIGN"],
     "client": "RESVR",
     "year": 2023,
     "title": "Project 2",
+    "desc": "S29.designis here to cover all your creative needs.We offer a wide range of services,including game designe, web design,brand design,arch-viz and architecture. With our divers skill set,we're well-equipped to handle projectsthat cut across various industries.So whether you are in gameing, web development, branding, or architecture, we've got you covered :",
+    "img": "crypto"
+  },
+  {
+    "id": 3,
+    "type": ["BRAND DESIGN"],
+    "client": "RESVR",
+    "year": 2023,
+    "title": "Project 3",
+    "desc": "S29.designis here to cover all your creative needs.We offer a wide range of services,including game designe, web design,brand design,arch-viz and architecture. With our divers skill set,we're well-equipped to handle projectsthat cut across various industries.So whether you are in gameing, web development, branding, or architecture, we've got you covered :",
+    "img": "crypto"
+  },
+  {
+    "id": 4,
+    "type": ["ARCH-VIZ"],
+    "client": "RESVR",
+    "year": 2023,
+    "title": "Project 4",
+    "desc": "S29.designis here to cover all your creative needs.We offer a wide range of services,including game designe, web design,brand design,arch-viz and architecture. With our divers skill set,we're well-equipped to handle projectsthat cut across various industries.So whether you are in gameing, web development, branding, or architecture, we've got you covered :",
+    "img": "crypto"
+  },
+  {
+    "id": 5,
+    "type": ["ARCHITECTURE"],
+    "client": "RESVR",
+    "year": 2023,
+    "title": "Project 5",
+    "desc": "S29.designis here to cover all your creative needs.We offer a wide range of services,including game designe, web design,brand design,arch-viz and architecture. With our divers skill set,we're well-equipped to handle projectsthat cut across various industries.So whether you are in gameing, web development, branding, or architecture, we've got you covered :",
+    "img": "crypto"
+  },
+  {
+    "id": 6,
+    "type": ["WEB DESIGN", "BRAND DESIGN"],
+    "client": "RESVR",
+    "year": 2023,
+    "title": "Project 6",
     "desc": "S29.designis here to cover all your creative needs.We offer a wide range of services,including game designe, web design,brand design,arch-viz and architecture. With our divers skill set,we're well-equipped to handle projectsthat cut across various industries.So whether you are in gameing, web development, branding, or architecture, we've got you covered :",
     "img": "crypto"
   }
