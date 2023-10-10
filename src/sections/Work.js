@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import "./work.css";
 import Project from "../components/Project";
 import projects from "../assets/data/projects.json";
+import Spectrum from "../components/Spectrum";
 const Work = () => {
   const [show, setShow] = useState("spect");
   const [types, setTypes] = useState([]);
   const [filterdProjects, setFilterdProjects] = useState([]);
+  const [spectValue, setSpectValue] = useState(1);
   const changeHandle = (e) => {
     const { checked, name } = e.target;
     let arr = [...types];
@@ -17,6 +19,17 @@ const Work = () => {
       });
     }
     setTypes(arr);
+  };
+  const spectHandle = () => {
+    const slider = document.getElementById("slider");
+    const spectBtns = document.querySelectorAll(".spect-btns p");
+
+    spectBtns.forEach((element) => {
+      element.style.color = "gray";
+    });
+    spectBtns[slider.value].style.color = "white";
+    console.log(spectBtns);
+    setSpectValue(slider.value);
   };
   const filterProjects = (projects, types) => {
     const res = [];
@@ -90,21 +103,9 @@ const Work = () => {
           </div>
         </form>
       ) : (
-        <div className="spectrum">
-          <p>OUR EXPERIENCE SPECTRUM</p>
-          <div>
-            <div className="spect-btns">
-              <p>all</p>
-              <p>game design</p>
-              <p>web design</p>
-              <p>brand design</p>
-              <p>arch-viz</p>
-              <p>architecture</p>
-            </div>
-            <div className="spect-box"></div>
-          </div>
-        </div>
+        <Spectrum />
       )}
+
       <div className="search-res">
         {types.length ? (
           <p>{filterdProjects.length} projects are founded</p>
