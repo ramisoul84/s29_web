@@ -3,6 +3,7 @@ import "./work.css";
 import Project from "../components/Project";
 import projects from "../assets/data/projects.json";
 import Spectrum from "../components/Spectrum";
+import Filters from "../components/Filters";
 const Work = () => {
   const [show, setShow] = useState("spect");
   const [types, setTypes] = useState([]);
@@ -20,16 +21,25 @@ const Work = () => {
     }
     setTypes(arr);
   };
-  const spectHandle = () => {
-    const slider = document.getElementById("slider");
-    const spectBtns = document.querySelectorAll(".spect-btns p");
-
-    spectBtns.forEach((element) => {
-      element.style.color = "gray";
-    });
-    spectBtns[slider.value].style.color = "white";
-    console.log(spectBtns);
-    setSpectValue(slider.value);
+  const spectHandle = (i) => {
+    console.log("iii", i);
+    switch (i) {
+      case "0":
+        setTypes(["GAME DESIGN"]);
+        break;
+      case "1":
+        setTypes(["WEB DESIGN"]);
+        break;
+      case "2":
+        setTypes(["BRAND DESIGN"]);
+        break;
+      case "3":
+        setTypes(["ARCH-VIZ"]);
+        break;
+      case "4":
+        setTypes(["ARCHITECTURE"]);
+        break;
+    }
   };
   const filterProjects = (projects, types) => {
     const res = [];
@@ -43,7 +53,10 @@ const Work = () => {
     // Here we should delete duplicates ....
     return res;
   };
-  useEffect(() => setFilterdProjects(filterProjects(projects, types)), [types]);
+  useEffect(() => {
+    setFilterdProjects(filterProjects(projects, types));
+    console.log("types", types);
+  }, [types]);
   return (
     <section id="work">
       <div className="work-head">
@@ -52,7 +65,7 @@ const Work = () => {
           className="btn-spect"
           onClick={() => {
             setShow("spect");
-            setTypes([]);
+            setTypes(["GAME DESIGN"]);
             setFilterdProjects([]);
           }}
           style={{ color: show === "spect" ? "white" : "gray" }}
@@ -72,48 +85,27 @@ const Work = () => {
         </p>
       </div>
       {show === "filt" ? (
-        <form className="filter-box">
-          <div className="filter-row">
-            <input type="checkbox" name="GAME DESIGN" onChange={changeHandle} />
-            <lable>game design</lable>
-          </div>
-          <div className="filter-row">
-            <input type="checkbox" name="WEB DESIGN" onChange={changeHandle} />
-            <lable>web design</lable>
-          </div>
-          <div className="filter-row">
-            <input
-              type="checkbox"
-              name="BRAND DESIGN"
-              onChange={changeHandle}
-            />
-            <lable>brand design</lable>
-          </div>
-          <div className="filter-row">
-            <input type="checkbox" name="ARCH-VIZ" onChange={changeHandle} />
-            <lable>arch-viz</lable>
-          </div>
-          <div className="filter-row">
-            <input
-              type="checkbox"
-              name="ARCHITECTURE"
-              onChange={changeHandle}
-            />
-            <lable>architecture</lable>
-          </div>
-        </form>
+        <Filters changeHandle={changeHandle} />
       ) : (
-        <Spectrum />
+        <Spectrum changeHandle={spectHandle} />
       )}
 
-      <div className="search-res">
-        {types.length ? (
-          <p>{filterdProjects.length} projects are founded</p>
-        ) : (
-          <p>Choose types you want to see</p>
-        )}
-      </div>
       <div className="projects">
+        <div className="search-res">
+          {types.length ? (
+            <p>
+              <span>!!!</span> {filterdProjects.length}{" "}
+              {filterdProjects.length === 1
+                ? "Project is FOUND"
+                : "Projects are found"}
+              <span> !!!</span>{" "}
+            </p>
+          ) : (
+            <p>
+              <span>!!!</span> Choose types you want to see <span>!!!</span>{" "}
+            </p>
+          )}
+        </div>
         {filterdProjects.map((e, i) => {
           return <Project project={e} />;
         })}

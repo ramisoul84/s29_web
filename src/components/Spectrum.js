@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./spectrum.css";
-const Spectrum = () => {
-  const [spectrumValue, setSpectrumValue] = useState(0);
+const Spectrum = ({ changeHandle }) => {
   const spectHandle = () => {
     const slider = document.getElementById("slider");
     const spects = document.querySelectorAll(".spectrum-type p");
@@ -14,9 +12,10 @@ const Spectrum = () => {
       element.style.backgroundColor = "gray";
     });
 
-    setSpectrumValue(slider.value);
     spects[slider.value].style.color = "white";
     sqs[slider.value].style.backgroundColor = "white";
+    changeHandle(slider.value);
+    console.log(slider.value);
   };
   return (
     <div className="spectrum">
