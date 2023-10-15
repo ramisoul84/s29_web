@@ -19,9 +19,21 @@ const Header = () => {
           </a>
         </nav>
       </div>
-      <div className="gradient gradient-3"></div>
-      <div className="gradient gradient-4"></div>
-      <div className="gradient gradient-5"></div>
+      <div className="gradient gradient-3">
+        <a href="#work" className="link link-work link-mob">
+          work
+        </a>
+      </div>
+      <div className="gradient gradient-4">
+        <a href="#about" className="link link-work link-mob">
+          about
+        </a>
+      </div>
+      <div className="gradient gradient-5">
+        <a href="#contact" className="link link-work link-mob">
+          contact
+        </a>
+      </div>
       <div className="gradient gradient-6"></div>
     </div>
   );

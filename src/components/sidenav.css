@@ -36,3 +36,28 @@ aside .color3 {
 aside .color4 {
   background: #a68183;
 }
+
+@media screen and (max-width: 600px) {
+  #side-nav {
+    background-color: gray;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+  }
+  .side-nav {
+    writing-mode: horizontal-tb;
+  }
+  aside .color1 {
+    margin: 0;
+  }
+  aside .color2 {
+    margin: 0;
+  }
+  aside .color3 {
+    margin: 0;
+  }
+  aside .color4 {
+    margin: 0;
+  }
+}

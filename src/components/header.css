@@ -109,6 +109,31 @@
     both;
   animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.4s both;
 }
+.link-mob {
+  display: none;
+}
+
+/* ========= Media Quiries  (small) ========== */
+@media screen and (max-width: 600px) {
+  .gradient-2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .header-logo {
+    padding: 0;
+  }
+  .header-nav {
+    display: none;
+  }
+  .link-mob {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.2rem;
+    font-family: var(--text-lcd);
+  }
+}
 
 /**
  * ----------------------------------------

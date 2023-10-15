@@ -20,7 +20,7 @@ const Project = ({ project }) => {
           alt="project.img"
           className="project-img"
         />
-        <div>
+        <div className="pro-right">
           <h3 className="project-title">{project.title}</h3>
           <p className="project-text">{project.desc}</p>
         </div>

@@ -6,9 +6,8 @@ import Spectrum from "../components/Spectrum";
 import Filters from "../components/Filters";
 const Work = () => {
   const [show, setShow] = useState("spect");
-  const [types, setTypes] = useState([]);
+  const [types, setTypes] = useState(["GAME DESIGN"]);
   const [filterdProjects, setFilterdProjects] = useState([]);
-  const [spectValue, setSpectValue] = useState(1);
   const changeHandle = (e) => {
     const { checked, name } = e.target;
     let arr = [...types];
@@ -39,6 +38,9 @@ const Work = () => {
       case "4":
         setTypes(["ARCHITECTURE"]);
         break;
+      default:
+        setTypes([]);
+        break;
     }
   };
   const filterProjects = (projects, types) => {
@@ -55,7 +57,6 @@ const Work = () => {
   };
   useEffect(() => {
     setFilterdProjects(filterProjects(projects, types));
-    console.log("types", types);
   }, [types]);
   return (
     <section id="work">

@@ -20,7 +20,7 @@
   -webkit-animation: heartbeat 1500ms ease-in-out infinite both;
   animation: heartbeat 1500ms ease-in-out infinite both;
 }
-
+/*
 .home-services {
   font-family: var(--text-mon);
   padding: 1rem;
@@ -29,6 +29,28 @@
   border-style: solid;
   border-image: linear-gradient(to right, #cb9b97, #7ec670) 1;
   line-height: 1.8rem;
+  animation: animatedgradient 3s ease alternate infinite;
+}
+*/
+.home-services {
+  font-family: var(--text-mon);
+  padding: 1rem;
+  line-height: 1.8rem;
+  background-color: var(--color-bg);
+  --borderWidth: 3px;
+  position: relative;
+}
+.home-services:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(to right, #cb9b97, #7ec670);
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
 }
 
 .home-services h5 {
@@ -166,5 +188,17 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -32,10 +32,27 @@
 .project-img {
   width: 100%;
 }
+.pro-right {
+  width: 100%;
+  height: 100%;
+}
 
 .project-text {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
 }
 li {
   list-style-type: none;
+}
+
+/* ========= Media Quiries  (small) ========== */
+@media screen and (max-width: 600px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+  .project-desc {
+    grid-template-columns: 1fr;
+  }
 }

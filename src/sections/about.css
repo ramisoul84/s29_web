@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-self: center;
 }
-
+/*
 .about-text {
   font-family: var(--text-mon);
   padding: 1rem;
@@ -12,6 +12,28 @@
   border-image: linear-gradient(to right, #d59f9f, #7ec670) 1;
   line-height: 1.8rem;
   margin: 1rem 0 2rem 0;
+}
+*/
+.about-text {
+  font-family: var(--text-mon);
+  padding: 1rem;
+  line-height: 1.8rem;
+  margin: 1rem 0 2rem 0;
+  --border-size: 3px;
+  --border-angle: 0turn;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      var(--color-bg),
+      var(--color-bg) 50%,
+      var(--color-bg)
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #d59f9f, #7ec670);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 3s linear infinite;
 }
 
 .about-text h5 {
@@ -71,4 +93,23 @@
   width: 90%;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+/* ========= Media Quiries  (small) ========== */
+@media screen and (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
 }
