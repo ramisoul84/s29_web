@@ -1,7 +1,21 @@
+import { useEffect, useRef } from "react";
 import "./home.css";
 const Home = () => {
+  const homeRef = useRef(null);
+  useEffect(() => {
+    const updateMousePosition = (ev) => {
+      if (!homeRef.current) return;
+      const { clientX, clientY } = ev;
+      homeRef.current.style.setProperty("--x", `${clientX}px`);
+      homeRef.current.style.setProperty("--y", `${clientY}px`);
+    };
+    window.addEventListener("mousemove", updateMousePosition);
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+    };
+  }, []);
   return (
-    <section id="home">
+    <section id="home" ref={homeRef}>
       <div className="home-hello">
         <div className="hello-sq"> </div>
         <p>

@@ -1,6 +1,12 @@
 #home {
   display: flex;
   flex-direction: column;
+
+  background-image: radial-gradient(
+    circle farthest-side at var(--x) var(--y),
+    #7ec670 1%,
+    transparent 10%
+  );
   -webkit-animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) 2.5s both;
   animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) 2.5s both;
 }
@@ -10,6 +16,7 @@
   font-size: 1.2rem;
   font-family: var(--text-lcd);
   margin: 12rem auto 5rem;
+  color: var(--color-var);
 }
 
 .hello-sq {
